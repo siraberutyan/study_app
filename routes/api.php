@@ -23,3 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // #投稿作成
 Route::post('/posts', [PostController::class, 'store']);
+
+//  # 投稿表示
+Route::get('/posts/{id}', [PostController::class, 'show']);

@@ -18,4 +18,11 @@ class PostController extends Controller
         $post->save();
         return response()->json(Post::all());
     }
+
+    // # 投稿表示
+    public function show(Int $id)
+    {
+        $post = Post::find($id);
+        return response()->json($post);
+    }
 }
